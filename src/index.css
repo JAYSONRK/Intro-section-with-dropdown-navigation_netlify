@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:ital,wght@0,500;1,200&family=Open+Sans&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Playpen+Sans:wght@700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,400;0,600;0,700;1,800&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;500;700&family=Rubik:ital@1&family=Space+Grotesk:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Epilogue, sans-serif;
+}
+
+:root {
+/* ## Neutral */
+--Almost-White: hsl(0, 0%, 98%);
+--Medium-Gray: hsl(0, 0%, 41%);
+--Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Almost-White);
+}
+
+.card {
+  width: 100vw;
+}
+
+.main-section {
+  display: grid;
+  grid-template-rows: 0.8fr 1fr;
+}
+
+header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main-img img{
+  max-width: 100%;
+}
+
+article {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+article h1 {
+  font-size: 1.9rem;
+}
+
+article p {
+  font-size: 0.9rem;
+  color: var(--Medium-Gray);
+  line-height: 1.4rem;
+  padding: 1rem 0;
+}
+
+article button {
+  width: 7.5rem;
+  height: 2.7rem;
+  font-size: 0.85rem;
+  color: var(--Almost-White);
+  background-color: var(--Almost-Black);
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem 0 1rem;
+}
+
+article button:hover {
+  outline: var(--Medium-Gray) solid 1px;
+  border-radius: 0.5rem;
+  color: var(--Almost-Black);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 0;
+}
+
+footer img:first-of-type {
+  width: 4rem;
+}
+
+footer img:nth-of-type(2) {
+  width: 3rem;
+}
+
+footer img:nth-of-type(3) {
+  width: 3.6rem;
+}
+
+footer img:nth-of-type(4) {
+  width: 4rem;
+}
+
+.menu-left, .menu-right {
+  display: none;
+}
+
+.mobile-menu {
+  min-width: 65vw;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
+.list {
+  padding:1rem 0.5rem;
+}
+.list li {
+  list-style-type: none;
+  padding: 0.7rem 0;
+  color: var(--Medium-Gray);
+  cursor: pointer;
+}
+
+.close-tag {
+  text-align: right;
+}
+
+.features {
+  padding: 0 1rem;
+}
+
+.features li {
+  list-style-type: none;
+  padding: 0.5rem 0;
+}
+
+.company {
+  padding:0 1rem;
+}
+
+.company li {
+  list-style-type: none;
+  padding: 0.5rem 0;
+}
+.menu-icon, .close-tag {
+  cursor: pointer;
+}
+
+.mobile-buttons {
+  padding: 1.5rem 0;
+}
+
+.mobile-buttons button {
+  width: 100%;
+  height: 2.2rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  color: var(--Medium-Gray);
+  margin-bottom: 0.5rem;
+}
+
+.mobile-buttons button:hover {
+  border:none;
+  outline: var(--Medium-Gray) solid 1px;
+  border-radius: 0.5rem;
+  color: var(--Almost-Black);
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+
+.card {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.6fr 4.5fr;
+  }
+
+  picture {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    max-height: 75vh;
+    padding-right: 55;
+  }
+
+  picture img {
+    max-height: 100%;
+    min-width: 80%;
+  }
+
+  article {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 18% 20% 0;
+    text-align: left;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-left, .menu-right {
+    display: block;
+  }
+
+  .main-section {
+    max-height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 5fr;
+    padding: 2rem;  
+  }
+
+  .menu-left ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .menu-left li {
+    list-style-type: none;
+    padding-right: 2.5rem;
+    font-size: 0.9rem;
+    color: var(--Medium-Gray);
+  }
+
+  .menu-left li:hover {
+    color: var(--Almost-Black);
+    cursor: pointer;
+  }
+
+  .menu-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu-right button{
+    width: 6rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: none;
+    color: var(--Medium-Gray);
+  }
+
+  .menu-right button:first-of-type {
+    margin-right:  2rem;
+  }
+
+  .menu-right button:hover {
+    border:none;
+    outline: var(--Medium-Gray) solid 1px;
+    border-radius: 0.5rem;
+    color: var(--Almost-Black);
+    cursor: pointer;
+  }
+
+  article h1 {
+    font-size: 4rem;
+  }
+
+  article p {
+    padding:2rem 2.5rem 2rem 0;
+  }
+
+  article button {
+    margin-bottom: 6rem ;
+  }
+
+  footer {
+    display: grid;
+    padding-bottom: 0;
+  }
+  
+  footer img:first-of-type {
+    width: 6rem;
+    padding-right: 1.5rem;
+  }
+  
+  footer img:nth-of-type(2) {
+    width: 4rem;
+  }
+  
+  footer img:nth-of-type(3) {
+    width: 5rem;
+  }
+  
+  footer img:nth-of-type(4) {
+    width: 6rem;
+  }
+
+  .headingd {
+    position: relative;
+  }
+
+  .features {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(232, 223, 223);
+    padding: 1rem 1.5rem;
+  }
+
+  .features li {
+    padding: 0.5rem 0;
+  }
+
+  .company {
+    position: absolute;
+    top: 8%;
+    right: 70%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(232, 223, 223);
+    padding: 1rem 1.5rem;
+  }
+
+  .company li {
+    padding: 0.5rem 0;
+  }  
+} 
